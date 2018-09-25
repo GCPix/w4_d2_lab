@@ -1,0 +1,10 @@
+we want to get the information back on orders.  so READ, but we might want to do it for all (index) or for one or a certain group (show)
+
+We also want to create(create) a new orders but we want the user to create them (new)
+
+We want the user to update the system and in trun that will update the database
+
+We will also want to remove orders if required.
+
+
+REST - representational, State, Transfer  you will read about restful APIs

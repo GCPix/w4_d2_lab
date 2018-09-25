@@ -1,0 +1,13 @@
+<form method="post" action = "/pizza-orders/<%=@order.id%>/delete">
+<h1>This page is for a single order</h1>
+
+<p>Name: <%= @order.pretty_name() %> </br> <strong>Order Detail:</strong> </br> Topping: <%=@order.topping%>, Amount Ordered: <%=@order.quantity%>, Cost: £<%=@order.total()%> </p>
+
+<input type="submit" value="Delete Order"/>
+
+</form>
+
+<form method="get" action = "/pizza-orders/<%=@order.id%>/edit">
+
+<input type="submit" value="Edit Order"/>
+</form>
