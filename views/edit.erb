@@ -8,10 +8,10 @@
           <input id="last-name" type="text" name="last_name" value = <%=@order.last_name%>>
       </br>
         <label style = "margin-right: 8px" for="pizza-select">Select a Pizza: </label>
-          <select id="pizza-select" name="topping" value = <%= @order.topping%>>
-            <option value="Margherita">Margherita</option>
-            <option value="Calzone">Calzone</option>
-            <option value="Italian Sausage">Italian Sausage</option>
+          <select id="pizza-select" name="topping">
+            <option value="Margherita"<%= "selected" if @order.topping == "Margherita"%>>Margherita</option>
+            <option value="Calzone"<%= "selected" if @order.topping == "Calzone"%>>Calzone</option>
+            <option value="Italian Sausage"<%= "selected" if @order.topping == "Italian Sausage"%>>Italian Sausage</option>
           </select>
       </br>
         <label style = "margin-right: 49px" for="quantity"> Quantity: </label>

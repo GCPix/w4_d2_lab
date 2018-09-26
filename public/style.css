@@ -16,7 +16,7 @@ td{ font-family: Rubik. sans-serif;
   border-style: inset;
   background-color: RGB(255,253,208);
   color: RGB(89,60,31);
-  text-align: justify;
+
 
 }
 
@@ -24,6 +24,7 @@ table{
   border-style: ridge;
   background-color: RGB(89,60,31);
   color: RGB(255,254,208);
+  text-align: center;
 }
 
 .button {

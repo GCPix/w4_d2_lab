@@ -39,10 +39,11 @@ post '/pizza-orders/new' do
 end
 
 post '/pizza-orders/delete/:id' do
-  @order = PizzaOrder.find(params[:id])
+  order = PizzaOrder.find(params[:id])
 
-  @order.delete()
+  order.delete()
   erb(:delete)
+  redirect "/pizza-orders"
 end
 
 post '/pizza-orders/:id' do
