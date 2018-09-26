@@ -31,7 +31,7 @@ get '/pizza-orders/:id/edit' do
   erb(:edit)
 end
 #i got this to work after a lot of looking about, I thought it would be OK as pizza-orders or pizza-orders/new but I had to cahnge it to something idfferent, not sur why.  need clarification.
-post '/pizza-orders/save' do
+post '/pizza-orders/new' do
   #as the class is initialized as a hash it just needs to have the inforamtion passed across we just pass the full hash
   @order = PizzaOrder.new(params)
   @order.save()

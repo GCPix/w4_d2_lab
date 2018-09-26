@@ -7,13 +7,13 @@
   <tr>
     <th>name</th>
     <th>Type of Pizza</th>
-    <th>Number of Pizzas</th>
+    <th># of Pizzas</th>
     <th>Total Cost</th>
     <th>More detail</th>
   </tr>
   <tr>
     <% for order in @orders%>
-      <td><p> Name: <%= order.pretty_name() %></td><td> Type of pizza: <%= order.topping %> </td> <td> Number Ordered: <%=order.quantity %> </td> <td> Total Cost = £<%= order.total %></p> </td> <td>
+      <td><%= order.pretty_name() %></td><td> <%= order.topping %> </td> <td> <%=order.quantity %> </td> <td> £<%= order.total %></p> </td> <td>
     <p><a href = "/pizza-orders/<%= order.id %>"> Show Order </a> </p> <%# uses the ID to update the id in the show.erb %></td>
   </tr>
   <%end%>

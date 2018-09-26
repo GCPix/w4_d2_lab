@@ -15,7 +15,8 @@ label{
 td{ font-family: Rubik. sans-serif;
   border-style: inset;
   background-color: RGB(255,253,208);
-  color: RGB(89,60,31)
+  color: RGB(89,60,31);
+  text-align: justify;
 
 }
 
