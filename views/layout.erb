@@ -3,23 +3,36 @@
 <head>
   <title>Pizza Shop</title>
   <link rel = "stylesheet" type = "text/css" href = "/style.css"
+<link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet">
 </head>
 <body>
   <div class= "container">
-    <div class = "header">
-      <nav>
-        <ul>
-          <li> <a href = "/pizza-orders"> All Pizza Orders</a></li>
+      <div class = "header" style = "margin-bottom: 50px;">
+        <h1>Your Domingo Pizza Order Site </h1>
+        <nav>
+          <ul>
 
-        </ul>
-      </nav>
-    </div>
-    <div class = "left_side"
-    <%= yield %>
+            <form style = "width: 20%; display: inline" method = "get" action = "/pizza-orders/new">
+
+              <input class = "button"  type="submit" value="Add Order"/>
+            </form>
+            <form style = "width: 20%; display: inline" method = "get" action = "/pizza-orders">
+
+              <input class = "button" type="submit" value="View All Orders"/>
+            </form>
+
+          </ul>
+        </nav>
+
+      </div>
+      <div class = "right_side">
+        <img width = "250px" height="500px "src="https://www.colourbox.com/preview/5232193-pizza-cartoon-character.jpg" alt = "cartoon pizza">
+      </div>
+      <div class = "left_side"
+      <%= yield %>
+      </div>
+
   </div>
-  <div class = "right_side">
-    <img href = "../pictures/22637635-happy-pizza-cartoon-with-thumb-up.jpg"
-  </div>
-  </div>
+
 </body>
 </html>

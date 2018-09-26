@@ -30,12 +30,19 @@ get '/pizza-orders/:id/edit' do
   @order = PizzaOrder.find(params[:id])
   erb(:edit)
 end
-#create
-post '/pizza-orders' do
+#i got this to work after a lot of looking about, I thought it would be OK as pizza-orders or pizza-orders/new but I had to cahnge it to something idfferent, not sur why.  need clarification.
+post '/pizza-orders/save' do
   #as the class is initialized as a hash it just needs to have the inforamtion passed across we just pass the full hash
   @order = PizzaOrder.new(params)
   @order.save()
   erb(:create)
+end
+
+post '/pizza-orders/delete/:id' do
+  @order = PizzaOrder.find(params[:id])
+
+  @order.delete()
+  erb(:delete)
 end
 
 post '/pizza-orders/:id' do
@@ -43,11 +50,4 @@ post '/pizza-orders/:id' do
 #we are using the .new(params) because the params, including the id is being passed from the webserver.  At initialisation this creates the object, the object can then be used to update the database
   @order.update()
   erb(:update)
-end
-
-post	'/pizza-orders/:id/delete' do
-  @order = PizzaOrder.find(params[:id])
-
-  @order.delete()
-  erb(:delete)
 end

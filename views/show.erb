@@ -1,13 +1,22 @@
-<form method="post" action = "/pizza-orders/<%=@order.id%>/delete">
+<form>
+
 <h1>This page is for a single order</h1>
 
-<p>Name: <%= @order.pretty_name() %> </br> <strong>Order Detail:</strong> </br> Topping: <%=@order.topping%>, Amount Ordered: <%=@order.quantity%>, Cost: £<%=@order.total()%> </p>
+<table style="width:100%">
 
-<input type="submit" value="Delete Order"/>
 
+  <div style = "padding-left: 15px; border-style: double; width: 75%; margin-left: 30px; margin-bottom: 50px;">
+    <p>Name: <%= @order.pretty_name() %> </br> <strong>Order Detail:</strong> </br> Topping: <%=@order.topping%>, Amount Ordered: <%=@order.quantity%>, Cost: £<%=@order.total()%> </p>
+
+  </div>
 </form>
 
-<form method="get" action = "/pizza-orders/<%=@order.id%>/edit">
+<form style = "width: 20%; display: inline" method="post" action = "/pizza-orders/delete/<%=@order.id%>">
 
-<input type="submit" value="Edit Order"/>
+    <input class = "button" type="submit" value="Delete Order"/>
+</form>
+
+<form style = "width: 20%; display: inline" method = "get" action = "/pizza-orders/<%=@order.id%>/edit">
+
+    <input class = "button" type="submit" value="Edit Order"/>
 </form>

@@ -1,24 +1,57 @@
 body{
+background-color: RGB(255,253,208);
 
+}
+h1{
+  font-size: 30px;
+  font-family: Rubik, sans-serif;
+  color: RGB(89, 60, 31);
+
+}
+label{
+  font-size: 20px;
+}
+
+td{ font-family: Rubik. sans-serif;
+  border-style: inset;
+  background-color: RGB(255,253,208);
+  color: RGB(89,60,31)
 
 }
 
-.navbar{
+table{
+  border-style: ridge;
+  background-color: RGB(89,60,31);
+  color: RGB(255,254,208);
+}
 
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 10px;
+}
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 .header{
-  grid-area: header
+  grid-area: header;
 }
 .left_side{
-  grid-area: left_side
+  grid-area: left_side;
 }
 .right_side{
-  grid-area: right_side
+  grid-area: right_side;
+
 }
 
 .footer{
-  grid-area: footer
+  grid-area: footer;
 }
 
 .container {
@@ -27,11 +60,11 @@ body{
   width: 960px;
   display: grid;
   grid-template-areas:
-  "header header"
+  "header right_side"
   "left_side right_side"
-  "footer footer";
-  grid-template-columns: 700px 300px;
-  grid-template-rows: 50px auto 50px;
+  "footer right_side";
+  grid-template-columns: auto 200px;
+  grid-template-rows: 150px auto 50px;
   grid-row-gap: 10px;
   grid-column-gap: 15px;
 }

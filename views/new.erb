@@ -1,17 +1,23 @@
-<form method = "post" action="/pizza-orders">
-  <%#name is the same as the has key, for and id must be the same this helps with text readers%>
 
-  <label for="first-name"> First Name: </label>
-    <input id="first-name" type="text" name="first_name"/>
-  <label for="last-name"> Last Name: </label>
-    <input id="last-name" type="text" name="last_name"/>
-  <label for="pizza-select">Select a Pizza: </label>
-    <select id="pizza-select" name="topping"> <%#select tag creates a dropdown%>
-      <option value="Margherita">Margherita</option>
-      <option value="Calzone">Calzone</option>
-    </select>
-  <label for="quantity"> Quantity: </label>
-    <input id="quantity" type="number" name="quantity"/>
+<div>
+    <form method="post" action = '/pizza-orders/save'>
 
-    <input type = "submit" value="Order Pizza"/>
-</form>
+      <label for="first-name"> First Name: </label>
+        <input id="first-name" type="text" name="first_name"/>
+
+      <label for="last-name"> Last Name: </label>
+        <input id="last-name" type="text" name="last_name"/>
+
+      <label for="pizza-select">Select a Pizza: </label>
+        <select id="pizza-select" name="topping">
+          <option value="Margherita">Margherita</option>
+          <option value="Calzone">Calzone</option>
+          <option value="Italian Sausage">Italian Sausage</option>
+        </select>
+
+      <label for="quantity"> Quantity: </label>
+        <input id="quantity" type="number" name="quantity"/>
+
+      <input type="submit" value="Add Order"/>
+    </form>
+</div>
